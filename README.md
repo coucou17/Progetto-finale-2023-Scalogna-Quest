@@ -1,10 +1,10 @@
 # Progetto-finale-2023-Scalogna-Quest
 Progetto finale Programmazione Procedurale UniPG Informatica
 
-# Nome: 
+## Nome: 
 
-# Cognome: 
+## Cognome: 
 
-# Matricola:
+## Matricola:
 
-# Commenti/modifiche al progetto
+## Commenti/modifiche al progetto
