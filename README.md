@@ -1,10 +1,10 @@
 # Progetto-finale-2023-Scalogna-Quest
 Progetto finale Programmazione Procedurale UniPG Informatica
 
-## Nome: 
+## Nome: Laurelvie Francette
 
-## Cognome: 
+## Cognome: Kiminou Lembe
 
-## Matricola:
+## Matricola: 361116
 
-## Commenti/modifiche al progetto:
+## Commenti/modifiche al progetto: ...
