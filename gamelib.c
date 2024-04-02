@@ -24,6 +24,7 @@ static struct Zona_segrete* pFirst= NULL;
 static struct Zona_segrete* pLast= NULL;
 
 // Funzioni statistiche
+static void count_tipo();
 static void abitante_attack();
 static void sei_morto();
 static void hai_vinto();
@@ -541,7 +542,8 @@ void turno_giocatore() {
             printf("7: scappa\n\n");
             printf("8: combatti\n\n");
             printf("9: gioca_potere_speciale\n\n");
-           printf("10: passa\n\n");
+            printf("10: passa\n\n");
+            printf("11: count_tipo\n");
             printf("\033[92mScelta:\033[0m ");
           scanf("%d", &va_bene);
           while (getchar() != '\n');
@@ -592,6 +594,9 @@ void turno_giocatore() {
             case 10:
             passa(giocatori[turno]);
             break;
+           case 11:
+           count_tipo();
+           break;
            default:
               system("clear");
               printf("\n\n\033[1;31m\t\t\t\t\tSCELTA SBAGLIATA INSERISCI UN NUMERO TRA 1 E 10\n\n");
@@ -646,6 +651,59 @@ turno_giocatore();
     termina_gioco();
  }
 }
+
+
+
+void count_tipo(enum Tipo_zona zona){
+  system("clear");
+   int count = 0;
+   int a = 0;
+   int b = 0;
+   int c = 0;
+   int d = 0;
+   int e = 0;
+   int f = 0;
+   int g = 0;
+   int h = 0;
+   int i = 0;
+  struct Zona_segrete* temp= pFirst;
+do {
+if (temp -> zona == corridoio) {
+  count++;
+} else if (temp -> zona == scala){
+  a++;
+}else if (temp -> zona == sala_banchetto){
+  b++;
+}else if (temp -> zona == magazzino){
+  c++;
+}else if (temp -> zona == giardino){
+  d++;
+}else if (temp -> zona == posto_guardia){
+  e++;
+}else if (temp -> zona == prigione){
+  f++;
+}else if (temp -> zona == cucina){
+  g++;
+}else if (temp -> zona == armeria){
+  h++;
+}else if (temp -> zona == tempio){
+  i++;
+}
+  temp = temp -> zona_successiva;
+}while(temp != NULL);
+  printf("ci sono %d corridoio\n", count);
+  printf("ci sono %d scala\n", a);
+  printf("ci sono %d sala_banchetto\n", b);
+  printf("ci sono %d magazzino\n", c);
+  printf("ci sono %d giardino\n", d);
+  printf("ci sono %d posto_guardia\n", e);
+  printf("ci sono %d prigione\n", f);
+  printf("ci sono %d cucina\n", g);
+  printf("ci sono %d armeria\n", h);
+  printf("ci sono %d tempio\n", i);
+return;
+}
+
 
 
 
